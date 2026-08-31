@@ -28,7 +28,7 @@ peridynamic point interacts with other points within a finite horizon. This is
 an illustration of nonlocality, not a physical model.
 
 <p align="center">
-  <a href="assets/videos/spider-nonlocal-interaction.mp4">
+  <a href="https://github.com/YIXINLI921/bcs-pd/raw/refs/heads/main/assets/videos/spider-nonlocal-interaction.mp4">
     <img src="assets/videos/spider-nonlocal-interaction-preview.gif" alt="Spider and web analogy for nonlocal interaction" width="760">
   </a>
 </p>
