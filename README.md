@@ -167,19 +167,6 @@ double precision may be slower or unavailable on some devices.
 The framework can be extended to computational plasticity, fracture, fluids,
 and fluid–structure interaction. Each extension requires dedicated verification.
 
-## Citation
-
-[CITATION.cff](CITATION.cff) provides machine-readable citation metadata.
-
-### Recommended citation
-
-> University of Warwick. (2026). *BCS-PD: A Parallel Boundary-Consistent
-> Stabilised Peridynamics Framework* (Version 0.1.0) [Computer software].
-> GitHub. https://github.com/YIXINLI921/bcs-pd
-
-If a permanent software DOI is assigned to a release, cite the archived release
-DOI in place of the GitHub URL.
-
 ## Simulation gallery
 
 The [simulation gallery](docs/gallery.md) presents five animation groups covering
