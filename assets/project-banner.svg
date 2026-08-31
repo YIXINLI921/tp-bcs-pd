@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">BCS-PD project banner</title>
+  <desc id="desc">A material point lattice, a highlighted nonlocal horizon, and an abstract stress field beside the project title.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#081f33"/>
+      <stop offset="0.55" stop-color="#123d55"/>
+      <stop offset="1" stop-color="#0f6d70"/>
+    </linearGradient>
+    <radialGradient id="horizon" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f2c14e" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#f2c14e" stop-opacity="0.04"/>
+    </radialGradient>
+    <pattern id="points" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="3.2" fill="#d9eef0" opacity="0.76"/>
+    </pattern>
+    <clipPath id="panelClip">
+      <rect x="0" y="0" width="390" height="300" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="300" rx="24" fill="url(#background)"/>
+  <g clip-path="url(#panelClip)">
+    <rect width="390" height="300" fill="url(#points)"/>
+    <circle cx="184" cy="151" r="98" fill="url(#horizon)" stroke="#f2c14e" stroke-width="2" stroke-dasharray="7 7"/>
+    <circle cx="184" cy="151" r="7" fill="#fff" stroke="#f2c14e" stroke-width="3"/>
+    <g stroke="#f2c14e" stroke-width="1.3" opacity="0.55">
+      <line x1="184" y1="151" x2="105" y2="75"/>
+      <line x1="184" y1="151" x2="135" y2="105"/>
+      <line x1="184" y1="151" x2="225" y2="75"/>
+      <line x1="184" y1="151" x2="255" y2="105"/>
+      <line x1="184" y1="151" x2="105" y2="165"/>
+      <line x1="184" y1="151" x2="255" y2="165"/>
+      <line x1="184" y1="151" x2="135" y2="225"/>
+      <line x1="184" y1="151" x2="225" y2="225"/>
+    </g>
+    <path d="M330 15 C294 66 312 112 278 158 C250 198 274 244 238 290" fill="none" stroke="#69d1c5" stroke-width="17" opacity="0.22"/>
+  </g>
+
+  <line x1="415" y1="54" x2="415" y2="246" stroke="#8fc8ce" stroke-width="1" opacity="0.45"/>
+  <text x="470" y="86" fill="#f7fbfc" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="0.3">BCS-PD</text>
+  <text x="470" y="143" fill="#f7fbfc" font-family="Inter, Arial, sans-serif" font-size="39" font-weight="700" letter-spacing="0.2">Boundary-Consistent</text>
+  <text x="470" y="191" fill="#f7fbfc" font-family="Inter, Arial, sans-serif" font-size="39" font-weight="700" letter-spacing="0.2">Stabilised Peridynamics</text>
+  <text x="473" y="231" fill="#b9dadd" font-family="Inter, Arial, sans-serif" font-size="19" letter-spacing="1.2">NONLOCAL BOUNDARIES · PARALLEL TAICHI KERNELS</text>
+</svg>

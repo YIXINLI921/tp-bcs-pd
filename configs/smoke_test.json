@@ -1,0 +1,16 @@
+{
+  "nx": 8,
+  "ny": 16,
+  "width": 0.08,
+  "height": 0.16,
+  "horizon_ratio": 3.015,
+  "young_modulus": 30000000.0,
+  "poisson_ratio": 0.25,
+  "traction_y": -200000.0,
+  "time_step": 1.0,
+  "steps": 5,
+  "sample_index": [4, 12],
+  "architecture": "cpu",
+  "default_fp": "f64",
+  "output_interval": 1
+}

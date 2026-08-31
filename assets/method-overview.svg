@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Elastic stabilised NOSB-PD method overview</title>
+  <desc id="desc">A plate shows applied top traction, a fixed bottom, an interior domain, and a two-horizon boundary region; a second panel shows the simulation workflow.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#155e75"/>
+    </marker>
+    <pattern id="lattice" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="2.8" fill="#155e75" opacity="0.72"/>
+    </pattern>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="648" rx="22" fill="#f8fbfc" stroke="#c7dfe3" stroke-width="2"/>
+  <text x="52" y="58" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="700" fill="#123d55">Boundary-aware elastic NOSB-PD</text>
+  <text x="52" y="91" font-family="Inter, Arial, sans-serif" font-size="16" fill="#486773">Direct traction balance near incomplete horizons</text>
+
+  <!-- plate -->
+  <rect x="95" y="150" width="330" height="390" fill="#dceff0" stroke="#155e75" stroke-width="2"/>
+  <rect x="95" y="150" width="330" height="390" fill="url(#lattice)"/>
+  <path d="M95 150 H425 V540 H95 Z M150 205 H370 V485 H150 Z" fill="#efb64d" opacity="0.28" fill-rule="evenodd"/>
+  <rect x="150" y="205" width="220" height="280" fill="#e9f5f4" opacity="0.70" stroke="#0f766e" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="236" y="337" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="700" fill="#0f766e">D</text>
+  <text x="206" y="368" font-family="Inter, Arial, sans-serif" font-size="15" fill="#315f61">complete horizons</text>
+  <text x="105" y="188" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#9a5d00">E</text>
+  <text x="282" y="185" font-family="Inter, Arial, sans-serif" font-size="14" fill="#795010">boundary layer ≈ 2δ</text>
+
+  <!-- top traction -->
+  <g stroke="#b4232b" stroke-width="3" marker-end="url(#arrow)">
+    <line x1="125" y1="115" x2="125" y2="145"/>
+    <line x1="180" y1="115" x2="180" y2="145"/>
+    <line x1="235" y1="115" x2="235" y2="145"/>
+    <line x1="290" y1="115" x2="290" y2="145"/>
+    <line x1="345" y1="115" x2="345" y2="145"/>
+    <line x1="400" y1="115" x2="400" y2="145"/>
+  </g>
+  <text x="183" y="118" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#8c1d25">Tₑₓₜ = −200 kPa</text>
+
+  <!-- fixed bottom -->
+  <line x1="84" y1="540" x2="436" y2="540" stroke="#123d55" stroke-width="4"/>
+  <g stroke="#123d55" stroke-width="1.6">
+    <line x1="100" y1="540" x2="84" y2="558"/>
+    <line x1="130" y1="540" x2="114" y2="558"/>
+    <line x1="160" y1="540" x2="144" y2="558"/>
+    <line x1="190" y1="540" x2="174" y2="558"/>
+    <line x1="220" y1="540" x2="204" y2="558"/>
+    <line x1="250" y1="540" x2="234" y2="558"/>
+    <line x1="280" y1="540" x2="264" y2="558"/>
+    <line x1="310" y1="540" x2="294" y2="558"/>
+    <line x1="340" y1="540" x2="324" y2="558"/>
+    <line x1="370" y1="540" x2="354" y2="558"/>
+    <line x1="400" y1="540" x2="384" y2="558"/>
+    <line x1="430" y1="540" x2="414" y2="558"/>
+  </g>
+  <text x="174" y="588" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#123d55">uₓ = uᵧ = 0</text>
+
+  <!-- horizon inset -->
+  <circle cx="401" cy="274" r="60" fill="#f2c14e" opacity="0.14" stroke="#bd7e11" stroke-width="2" stroke-dasharray="6 5"/>
+  <circle cx="401" cy="274" r="6" fill="#b4232b"/>
+  <line x1="401" y1="274" x2="458" y2="274" stroke="#bd7e11" stroke-width="2"/>
+  <text x="427" y="264" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#8a5c0c">δ</text>
+
+  <!-- workflow -->
+  <line x1="515" y1="120" x2="515" y2="570" stroke="#c7dfe3" stroke-width="2"/>
+  <text x="568" y="138" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#123d55">Parallel computational workflow</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="568" y="172" width="530" height="62" rx="12" fill="#e7f2f5" stroke="#8abac5"/>
+    <text x="593" y="198" font-size="17" font-weight="700" fill="#123d55">1 · Reference geometry</text>
+    <text x="593" y="220" font-size="14" fill="#486773">neighbour offsets · shape tensors · boundary normals</text>
+
+    <line x1="833" y1="234" x2="833" y2="260" stroke="#155e75" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="568" y="266" width="530" height="62" rx="12" fill="#e9f5f4" stroke="#75b9ae"/>
+    <text x="593" y="292" font-size="17" font-weight="700" fill="#0f5f59">2 · Kinematics and constitutive response</text>
+    <text x="593" y="314" font-size="14" fill="#486773">current coordinates · F · small strain · elastic stress</text>
+
+    <line x1="833" y1="328" x2="833" y2="354" stroke="#155e75" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="568" y="360" width="530" height="76" rx="12" fill="#fff3d8" stroke="#e1ac3b"/>
+    <text x="593" y="386" font-size="17" font-weight="700" fill="#805000">3 · Boundary-aware internal force</text>
+    <text x="593" y="408" font-size="14" fill="#654f28">D: symmetric correspondence · E: stress divergence</text>
+    <text x="593" y="426" font-size="14" fill="#654f28">surface: (Tₑₓₜ − P·n)/Δx · bond stabilisation</text>
+
+    <line x1="833" y1="436" x2="833" y2="462" stroke="#155e75" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="568" y="468" width="530" height="62" rx="12" fill="#e7f2f5" stroke="#8abac5"/>
+    <text x="593" y="494" font-size="17" font-weight="700" fill="#123d55">4 · Adaptive dynamic relaxation</text>
+    <text x="593" y="516" font-size="14" fill="#486773">Rayleigh damping · explicit half-step velocity · constraints</text>
+
+    <path d="M1098 499 C1140 499 1140 203 1098 203" fill="none" stroke="#155e75" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+    <text x="1128" y="364" transform="rotate(90 1128 364)" font-size="13" font-weight="700" fill="#155e75">virtual-time iterations</text>
+  </g>
+
+  <text x="568" y="582" font-family="Inter, Arial, sans-serif" font-size="14" fill="#486773">Taichi kernels parallelise point-wise loops and neighbour reductions.</text>
+  <text x="52" y="624" font-family="Inter, Arial, sans-serif" font-size="12" fill="#718b94">Original project artwork · schematic not to scale</text>
+</svg>

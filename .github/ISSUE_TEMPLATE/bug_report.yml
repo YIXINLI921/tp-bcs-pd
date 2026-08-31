@@ -1,0 +1,34 @@
+name: Numerical or software defect
+description: Report a reproducible failure or incorrect result
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please remove confidential data and reduce the case before submitting.
+  - type: textarea
+    id: description
+    attributes:
+      label: Observed behaviour
+      description: What happened, and what objective result did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide the command and smallest JSON configuration.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python, Taichi, NumPy, backend, precision, and commit/tag.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Numerical evidence
+      description: Include the comparison, invariant, error norm, or relevant output.

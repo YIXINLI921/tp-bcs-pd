@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bcs-pd"
+version = "0.1.0"
+description = "Parallel boundary-consistent stabilised peridynamics framework implemented with Taichi"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "University of Warwick"}
+]
+keywords = [
+  "peridynamics",
+  "NOSB-PD",
+  "Taichi",
+  "computational mechanics",
+  "nonlocal methods",
+  "geomaterials"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Physics"
+]
+dependencies = [
+  "matplotlib>=3.7",
+  "numpy>=1.24",
+  "taichi>=1.7,<2"
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7", "pytest-cov>=4"]
+dev = ["ruff>=0.6", "build>=1.2", "twine>=5"]
+
+[project.scripts]
+stabilised-pd = "stabilised_pd.cli:main"
+
+[project.urls]
+Repository = "https://github.com/YIXINLI921/bcs-pd"
+Issues = "https://github.com/YIXINLI921/bcs-pd/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+extend-exclude = ["build", "debug.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
