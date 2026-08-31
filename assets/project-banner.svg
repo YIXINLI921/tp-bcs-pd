@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
-  <title id="title">BCS-PD project banner</title>
+  <title id="title">TP-BCS-PD project banner</title>
   <desc id="desc">A material point lattice, a highlighted nonlocal horizon, and an abstract stress field beside the project title.</desc>
   <defs>
     <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
@@ -38,7 +38,7 @@
   </g>
 
   <line x1="415" y1="54" x2="415" y2="246" stroke="#8fc8ce" stroke-width="1" opacity="0.45"/>
-  <text x="470" y="86" fill="#f7fbfc" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="0.3">BCS-PD</text>
+  <text x="470" y="86" fill="#f7fbfc" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="0.3">TP-BCS-PD</text>
   <text x="470" y="143" fill="#f7fbfc" font-family="Inter, Arial, sans-serif" font-size="39" font-weight="700" letter-spacing="0.2">Boundary-Consistent</text>
   <text x="470" y="191" fill="#f7fbfc" font-family="Inter, Arial, sans-serif" font-size="39" font-weight="700" letter-spacing="0.2">Stabilised Peridynamics</text>
   <text x="473" y="231" fill="#b9dadd" font-family="Inter, Arial, sans-serif" font-size="19" letter-spacing="1.2">NONLOCAL BOUNDARIES · PARALLEL TAICHI KERNELS</text>

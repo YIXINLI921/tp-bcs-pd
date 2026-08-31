@@ -15,7 +15,7 @@ from .plotting import save_summary_figure
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="stabilised-pd",
+        prog="tp-bcs-pd",
         description=(
             "Run the elastic stabilised NOSB-PD plate benchmark with direct "
             "traction and displacement boundary conditions."

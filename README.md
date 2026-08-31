@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="assets/project-banner.svg" alt="BCS-PD" width="900">
+<img src="assets/project-banner.svg" alt="TP-BCS-PD" width="900">
 
-# BCS-PD
+# TP-BCS-PD
 
-**A Parallel Boundary-Consistent Stabilised Peridynamics Framework**
+**A Taichi-Parallel Boundary-Consistent Stabilised Peridynamics Framework**
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Taichi](https://img.shields.io/badge/Taichi-1.7%2B-000000)](https://www.taichi-lang.org/)
@@ -12,7 +12,7 @@
 
 </div>
 
-BCS-PD implements small-strain elastic NOSB-PD with boundary correction and
+TP-BCS-PD implements small-strain elastic NOSB-PD with boundary correction and
 zero-energy-mode stabilisation. [Taichi](https://www.taichi-lang.org/)
 parallelises material-point and neighbourhood operations on CPUs and GPUs.
 
@@ -28,7 +28,7 @@ peridynamic point interacts with other points within a finite horizon. This is
 an illustration of nonlocality, not a physical model.
 
 <p align="center">
-  <a href="https://github.com/YIXINLI921/bcs-pd/raw/refs/heads/main/assets/videos/spider-nonlocal-interaction.mp4">
+  <a href="https://github.com/YIXINLI921/tp-bcs-pd/raw/refs/heads/main/assets/videos/spider-nonlocal-interaction.mp4">
     <img src="assets/videos/spider-nonlocal-interaction-preview.gif" alt="Spider and web analogy for nonlocal interaction" width="760">
   </a>
 </p>
@@ -70,8 +70,8 @@ adaptive dynamic relaxation (ADR) computes the quasi-static response.
 Install the project in a clean Python environment:
 
 ```bash
-git clone https://github.com/YIXINLI921/bcs-pd.git
-cd bcs-pd
+git clone https://github.com/YIXINLI921/tp-bcs-pd.git
+cd tp-bcs-pd
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip

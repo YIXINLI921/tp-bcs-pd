@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bcs-pd"
+name = "tp-bcs-pd"
 version = "0.1.0"
-description = "Parallel boundary-consistent stabilised peridynamics framework implemented with Taichi"
+description = "Taichi-parallel boundary-consistent stabilised peridynamics framework"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
@@ -16,6 +16,7 @@ keywords = [
   "peridynamics",
   "NOSB-PD",
   "Taichi",
+  "parallel computing",
   "computational mechanics",
   "nonlocal methods",
   "geomaterials"
@@ -41,11 +42,11 @@ test = ["pytest>=7", "pytest-cov>=4"]
 dev = ["ruff>=0.6", "build>=1.2", "twine>=5"]
 
 [project.scripts]
-stabilised-pd = "stabilised_pd.cli:main"
+tp-bcs-pd = "stabilised_pd.cli:main"
 
 [project.urls]
-Repository = "https://github.com/YIXINLI921/bcs-pd"
-Issues = "https://github.com/YIXINLI921/bcs-pd/issues"
+Repository = "https://github.com/YIXINLI921/tp-bcs-pd"
+Issues = "https://github.com/YIXINLI921/tp-bcs-pd/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
