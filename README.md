@@ -78,36 +78,8 @@ python -m pip install --upgrade pip
 python -m pip install -e ".[test]"
 ```
 
-## Quick start
-
-Smoke test:
-
-```bash
-stabilised-pd \
-  --config configs/smoke_test.json \
-  --output results/smoke-test
-```
-
-Reference elastic plate:
-
-```bash
-stabilised-pd \
-  --config configs/reference_elastic_plate.json \
-  --output results/reference-elastic-plate
-```
-
-The reference case contains 5,000 points and 20,000 virtual-time steps. Use
-`--steps 100` to shorten development runs without changing the configuration.
-
-Each run writes:
-
-- `fields.npz` — coordinates, displacement, Cauchy stress, and internal force;
-- `summary.json` — full configuration and scalar diagnostics; and
-- `field-summary.png` — vertical displacement and von Mises stress contours.
-
-For larger datasets, convert the point fields to VTK/VTU for post-processing in
-[ParaView](https://www.paraview.org/). Native VTK/VTU export is planned; version
-0.1.0 writes portable NumPy arrays to `fields.npz`.
+Simulation fields are stored as portable NumPy arrays and can be converted to
+VTK/VTU for post-processing in [ParaView](https://www.paraview.org/).
 
 ## Elastic plate benchmark: boundary-effect correction
 
@@ -170,25 +142,6 @@ The archived configuration defines a rectangular plane-strain compression test:
 Automated FEM comparison and mesh/horizon convergence remain open verification
 tasks; see [Verification and reproducibility](docs/verification.md).
 
-## Repository layout
-
-```text
-bcs-pd/
-├── src/stabilised_pd/       # installable solver, CLI, and plotting helpers
-├── configs/                 # immutable JSON simulation inputs
-├── examples/                # library-level usage examples
-├── tests/                   # configuration and numerical smoke tests
-├── docs/                    # theory, scope, verification, and development notes
-├── assets/                  # original project diagrams and example output
-├── debug.py                 # minimally corrected legacy research script
-├── CITATION.cff             # machine-readable software citation
-├── CONTRIBUTING.md          # contribution and review workflow
-└── pyproject.toml           # package and tool configuration
-```
-
-The legacy script is retained for provenance. New development should target the
-modules under `src/stabilised_pd`.
-
 ## Limitations
 
 This is research software, not a certified engineering analysis package.
@@ -232,11 +185,6 @@ DOI in place of the GitHub URL.
 The [simulation gallery](docs/gallery.md) presents five animation groups covering
 nonlocal interaction, horizon sensitivity, fracture and strain localisation,
 an exploratory fluid calculation, and a compressed perforated plate.
-
-## Contributing and support
-
-Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Report
-security issues as described in [SECURITY.md](SECURITY.md).
 
 ## License
 
